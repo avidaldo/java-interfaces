@@ -1,6 +1,9 @@
 package org.example;
 
-public class Main {
+
+import org.example.FromScratch.Producto;
+
+class Main {
     public static void main(String[] args) {
 
 
@@ -11,50 +14,22 @@ public class Main {
         }*/
 
 
-        EmpleadoCustomComparable[] personas = new EmpleadoCustomComparable[]{
-                new EmpleadoCustomComparable("Alan Turin", 1986),
-                new EmpleadoCustomComparable("Alejandro Vidal", 1987),
-                new EmpleadoCustomComparable("María ", 1982)
+        Producto[] productos = new Producto[]{
+                new Producto("Samsung Galaxy A12", 200),
+                new Producto("Xiaomi Redmi 9 ", 120),
+                new Producto("Xiaomi Redmi 9A", 150)
         };
 
 
-        ordenaPersonasPorFechaNacimiento(personas);
+        LibreriaOrdenar.ordenarProductos(productos);
+
+        System.out.println(productos);
 
     }
 
 
-    public static void burbuja(Integer[] data) {
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data.length - 1; j++) {
-                if (data[j] > data[j + 1]) {
-                    Integer temp = data[j];
-                    data[j] = data[j + 1];
-                    data[j + 1] = temp;
-                }
-            }
-        }
-    }
-
-    public static void burbujaPersonas(PersonaCustomComparable[] data) {
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data.length - 1; j++) {
-                if (data[j].esMayor(data[j + 1])) {
-                    EmpleadoCustomComparable temp = data[j];
-                    data[j] = data[j + 1];
-                    data[j + 1] = temp;
-                }
-            }
-        }
-    }
 
 
-    public static void ordenaPersonasPorFechaNacimiento(EmpleadoCustomComparable[] personas) {
 
-
-        //Collections.sort(al);
-        burbujaPersonas(personas);
-
-        System.out.println(al);
-    }
 
 }
