@@ -17,6 +17,7 @@ public final class LibreriaOrdenarProductos {
         }
     }
 
+    /** main para testear la ordenación por burbuja */
     public static void main(String[] args) {
         Integer[] vals = {15, 60, 8, 16, 44, 27, 12, 35};
         LibreriaOrdenarProductos.ordenarIntsBurbuja(vals);

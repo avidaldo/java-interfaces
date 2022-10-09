@@ -9,9 +9,6 @@ class Main {
 
     public static void main(String[] args) {
 
-
-        /* Ejemplos con objetos de tipo Producto */
-
         Producto[] productos = new Producto[5];
 
         Producto p1 = new Producto("P1", 300);
@@ -34,27 +31,30 @@ class Main {
 
 
 
-        System.out.println("Lista antes de ordenar:                   " + Arrays.toString(productos));
+        System.out.println("Lista antes de ordenar:                " + Arrays.toString(productos));
 
         LibreriaOrdenarProductos.ordenarProductos(productos);
-        System.out.println("Lista por orden natural ("+TEST_ORDEN_NATURAL+"):         " + Arrays.toString(productos));
+        System.out.println("Lista por orden natural ("+TEST_ORDEN_NATURAL+"):      " + Arrays.toString(productos));
 
         LibreriaOrdenarProductos.ordenarProductos(productos, new ProductosPorVentasComparator());
-        System.out.println("Lista ordenada con comparador por ventas: " + Arrays.toString(productos));
+        System.out.println("Ordenada con comparador por ventas:    " + Arrays.toString(productos));
 
         LibreriaOrdenarProductos.ordenarProductos(productos, new ProductosPorPrecioComparator());
-        System.out.println("Lista ordenada con comparador por precio: " + Arrays.toString(productos));
+        System.out.println("Ordenada con comparador por precio:    " + Arrays.toString(productos));
 
+        LibreriaOrdenarProductos.ordenarProductos(productos, new ProductosComparator() {
+            @Override
+            public boolean esMayor(Producto p1, Producto p2) {
+                return p1.getVentas() > p2.getVentas();
+            }
+        });
+        System.out.println("Ordenada con clase anónima por ventas: " + Arrays.toString(productos));
 
-
-
+        LibreriaOrdenarProductos.ordenarProductos(productos, (p11, p21) -> p11.getPrecio() > p21.getPrecio());
+        System.out.println("Ordenada con lambda por precio:        " + Arrays.toString(productos));
 
 
     }
-
-
-
-
 
 
 }
