@@ -1,8 +1,5 @@
 package org.example.con_api;
 
-import org.example.simplificado.LibreriaOrdenarProductos;
-import org.example.simplificado.ProductosComparator;
-
 import java.util.Arrays;
 import java.util.Comparator;
 

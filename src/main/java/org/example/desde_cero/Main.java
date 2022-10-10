@@ -1,8 +1,8 @@
-package org.example.simplificado;
+package org.example.desde_cero;
 
 import java.util.Arrays;
 
-import static org.example.simplificado.Producto.TEST_ORDEN_NATURAL;
+import static org.example.desde_cero.Producto.TEST_ORDEN_NATURAL;
 
 
 class Main {

@@ -1,4 +1,4 @@
-package org.example.simplificado;
+package org.example.desde_cero;
 
 
 public class ProductosPorPrecioComparator implements ProductosComparator{
