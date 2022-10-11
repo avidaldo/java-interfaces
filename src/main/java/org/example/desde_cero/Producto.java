@@ -1,5 +1,7 @@
 package org.example.desde_cero;
 
+import org.example.desde_cero.libreria.ProductoComparable;
+
 public class Producto implements ProductoComparable {
 
     private enum Orden {PRECIO, VENTAS}

@@ -1,5 +1,8 @@
 package org.example.desde_cero;
 
+import org.example.desde_cero.libreria.LibreriaOrdenarProductos;
+import org.example.desde_cero.libreria.ProductosComparator;
+
 import java.util.Arrays;
 
 import static org.example.desde_cero.Producto.TEST_ORDEN_NATURAL;

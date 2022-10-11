@@ -1,7 +1,9 @@
 package org.example.desde_cero;
 
 
-public class ProductosPorPrecioComparator implements ProductosComparator{
+import org.example.desde_cero.libreria.ProductosComparator;
+
+public class ProductosPorPrecioComparator implements ProductosComparator {
 
     @Override
     public boolean esMayor(Producto p1, Producto p2) {
